@@ -11,6 +11,7 @@
 const generateUrl = (text) => {
   const url = [
     location.origin,
+    location.pathname,
     "/mark.html",
     "?q=",
     // 箇条書き表記のままのほうが文字数が少ない分容量も少ない
