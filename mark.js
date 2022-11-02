@@ -46,6 +46,11 @@
   document.body.append(toolbarDom);
 
   window.edit = () => {
-    location.href = `/?q=${q}`;
+    location.href = [
+      location.origin,
+      location.pathname,
+      "?q=",
+      q
+    ].join("");
   };
 })();
