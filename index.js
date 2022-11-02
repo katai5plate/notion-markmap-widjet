@@ -10,13 +10,14 @@
 })();
 const generateUrl = (text) => {
   const url = [
-    location.origin,
-    location.pathname,
+    window.common.baseUrl,
     "/mark.html",
     "?q=",
     // 箇条書き表記のままのほうが文字数が少ない分容量も少ない
     LZString.compressToEncodedURIComponent(text),
-  ].join("").replace(/\/\//g,"/");
+  ]
+    .join("")
+    .replace(/\/\//g, "/");
   if (url.length > 2000) throw new Error("URL長すぎ");
   return url;
 };
