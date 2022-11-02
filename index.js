@@ -32,3 +32,11 @@ const submit = () => {
     alert(error);
   }
 };
+const url = () => {
+  const kajo = document.querySelector("#kajo").value;
+  try {
+    document.querySelector("#url").innerText = generateUrl(kajo);
+  } catch (error) {
+    alert(error);
+  }
+};
