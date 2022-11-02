@@ -16,7 +16,7 @@ const generateUrl = (text) => {
     "?q=",
     // 箇条書き表記のままのほうが文字数が少ない分容量も少ない
     LZString.compressToEncodedURIComponent(text),
-  ].join("");
+  ].join("").replace(/\/\//g,"/");
   if (url.length > 2000) throw new Error("URL長すぎ");
   return url;
 };
