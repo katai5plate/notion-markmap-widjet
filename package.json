@@ -1,5 +1,5 @@
 {
-  "name": "notion-markmap-widjet",
+  "name": "notion-mindmap-widjet",
   "version": "1.0.0",
   "description": "Notion埋め込み用・簡易マインドマップ",
   "main": "index.js",
