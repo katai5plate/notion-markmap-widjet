@@ -4,6 +4,8 @@ Notion 埋め込み用・簡易マインドマップ
 
 箇条書きをマインドマップにして表示できます。
 
+https://katai5plate.github.io/notion-mindmap-widjet/
+
 ## Notion に貼り付ける
 
 1. 箇条書きをテキストボックスに貼り付ける
