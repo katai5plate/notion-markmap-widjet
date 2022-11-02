@@ -18,7 +18,7 @@ const generateUrl = (text) => {
     LZString.compressToEncodedURIComponent(text),
   ]
     .join("")
-    .replace(/[^:]\/\//g, "/");
+    .replace(/([^:])\/\//g, "$1/");
   if (url.length > 2000) throw new Error("URL長すぎ");
   return url;
 };

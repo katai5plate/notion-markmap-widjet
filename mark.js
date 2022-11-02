@@ -49,6 +49,6 @@
   window.edit = () => {
     location.href = [window.common.baseUrl, "?q=", q]
       .join("")
-      .replace(/[^:]\/\//g, "/");
+      .replace(/([^:])\/\//g, "$1/");
   };
 })();
