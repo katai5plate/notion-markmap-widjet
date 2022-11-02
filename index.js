@@ -1,3 +1,5 @@
+document.querySelector("#kajo").placeholder = window.common.placeholder;
+
 (() => {
   const qMatch = location.search.match(/[?|&]q=(\S*)($|&)/);
   if (!qMatch) return;
@@ -7,8 +9,8 @@
     location.search.match(/[?|&]q=(\S*)($|&)/)[1]
   );
   document.querySelector("#kajo").value = unzipText;
-  document.querySelector("#kajo").placeholder = window.common.placeholder;
 })();
+
 const generateUrl = (text) => {
   const url = [
     window.common.baseUrl,
