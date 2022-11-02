@@ -48,9 +48,9 @@
   window.edit = () => {
     location.href = [
       location.origin,
-      location.pathname,
+      `/${location.pathname.split(/\//g).slice(1)[0]}`,
       "?q=",
       q
-    ].join("");
+    ].join("").replace(/\/\//g,"/");
   };
 })();
