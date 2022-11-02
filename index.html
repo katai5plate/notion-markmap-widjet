@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <title>Settings</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="field">
+        <label class="label">箇条書き</label>
+        <div class="control">
+          <textarea id="kajo" class="textarea" rows="15" placeholder="題名&#13;&#10;・１&#13;&#10;　・２"></textarea>
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button onclick="submit()" class="button is-link">作成</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "notion-markmap-widjet",
+  "version": "1.0.0",
+  "description": "Notion埋め込み用・簡易マインドマップ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run clean && parcel src/index.html --open",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katai5plate/notion-markmap-widjet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katai5plate/notion-markmap-widjet/issues"
+  },
+  "homepage": "https://github.com/katai5plate/notion-markmap-widjet#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}

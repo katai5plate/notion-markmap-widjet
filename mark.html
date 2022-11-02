@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.3/dist/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <title>Markmap Preview</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.3/dist/index.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mikanjs@1.0.14/src/mikan.min.js"></script>
+  <svg id="markmap" style="width: 100%; height: 99vh"></svg>
+  <script src="./mark.js"></script>
+  <div style="position:absolute;top:20px;left:20px">
+    <button style="width: 50px; height: 50px; opacity: 75%;" onclick="window.edit()">編集</button>
+  </div>
+</body>
+
+</html>
