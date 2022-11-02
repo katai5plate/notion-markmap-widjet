@@ -1,6 +1,7 @@
 (() => {
   const gotoForm = () => {
-    location.href = "/";
+    alert("パースエラー");
+    location.href = window.common.baseUrl;
   };
   const qMatch = location.search.match(/[?|&]q=(\S*)($|&)/);
   if (!qMatch) return gotoForm();
@@ -48,6 +49,6 @@
   window.edit = () => {
     location.href = [window.common.baseUrl, "?q=", q]
       .join("")
-      .replace(/\/\//g, "/");
+      .replace(/[^:]\/\//g, "/");
   };
 })();

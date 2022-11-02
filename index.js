@@ -7,6 +7,7 @@
     location.search.match(/[?|&]q=(\S*)($|&)/)[1]
   );
   document.querySelector("#kajo").value = unzipText;
+  document.querySelector("#kajo").placeholder = window.common.placeholder;
 })();
 const generateUrl = (text) => {
   const url = [
@@ -17,7 +18,7 @@ const generateUrl = (text) => {
     LZString.compressToEncodedURIComponent(text),
   ]
     .join("")
-    .replace(/\/\//g, "/");
+    .replace(/[^:]\/\//g, "/");
   if (url.length > 2000) throw new Error("URL長すぎ");
   return url;
 };
