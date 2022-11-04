@@ -11,13 +11,13 @@ document.querySelector("#kajo").placeholder = window.common.placeholder;
   document.querySelector("#kajo").value = unzipText;
 })();
 
-const generateUrl = (text) => {
+const generateUrl = (text, force) => {
   const url = `${
     window.common.baseUrl
   }/mark.html?q=${LZString.compressToEncodedURIComponent(
     text
   )}&r=${`${Math.random()}`.slice(-4)}`.replace(/([^:])\/\//g, "$1/");
-  if (url.length > 2000) throw new Error("URL長すぎ");
+  if (!force && url.length > 2000) throw new Error("URL長すぎ");
   return url;
 };
 const submit = () => {
@@ -28,10 +28,10 @@ const submit = () => {
     alert(error);
   }
 };
-const url = () => {
+const url = (force) => {
   const kajo = document.querySelector("#kajo").value;
   try {
-    document.querySelector("#url").innerText = generateUrl(kajo);
+    document.querySelector("#url").innerText = generateUrl(kajo, force);
   } catch (error) {
     alert(error);
   }
