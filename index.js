@@ -12,15 +12,11 @@ document.querySelector("#kajo").placeholder = window.common.placeholder;
 })();
 
 const generateUrl = (text) => {
-  const url = [
-    window.common.baseUrl,
-    "/mark.html",
-    "?q=",
-    // 箇条書き表記のままのほうが文字数が少ない分容量も少ない
-    LZString.compressToEncodedURIComponent(text),
-  ]
-    .join("")
-    .replace(/([^:])\/\//g, "$1/");
+  const url = `${
+    window.common.baseUrl
+  }/mark.html?q=${LZString.compressToEncodedURIComponent(
+    text
+  )}&r=${`${Math.random()}`.slice(-4)}`.replace(/([^:])\/\//g, "$1/");
   if (url.length > 2000) throw new Error("URL長すぎ");
   return url;
 };

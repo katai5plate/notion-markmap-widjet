@@ -1,6 +1,6 @@
 window.common = {
-  baseUrl: /localhost/.test(location.origin)
-    ? "/"
+  baseUrl: /localhost:5500/.test(location.origin)
+    ? "http://localhost:5500/"
     : "https://katai5plate.github.io/notion-mindmap-widjet/",
   placeholder: `題名
 ・１

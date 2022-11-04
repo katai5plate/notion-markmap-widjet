@@ -47,8 +47,9 @@
   document.body.append(toolbarDom);
 
   window.edit = () => {
-    location.href = [window.common.baseUrl, "?q=", q]
-      .join("")
-      .replace(/([^:])\/\//g, "$1/");
+    location.href = `${window.common.baseUrl}?q=${q}`.replace(
+      /([^:])\/\//g,
+      "$1/"
+    );
   };
 })();
